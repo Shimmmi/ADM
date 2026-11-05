@@ -1,0 +1,1265 @@
+{
+ "id": "ZONE_TAIGA",
+ "chapter": "CH01",
+ "name": "Тайга",
+ "size": [
+  320,
+  320
+ ],
+ "terrain": {
+  "gen": {
+   "seed": 3307,
+   "base": 0,
+   "noiseAmp": 5,
+   "noiseScale": 55,
+   "octaves": 4,
+   "rim": 22,
+   "features": [
+    {
+     "kind": "hill",
+     "pos": [
+      96,
+      96
+     ],
+     "r": 46,
+     "height": 18
+    },
+    {
+     "kind": "hill",
+     "pos": [
+      236,
+      262
+     ],
+     "r": 48,
+     "height": 24
+    },
+    {
+     "kind": "hill",
+     "pos": [
+      262,
+      146
+     ],
+     "r": 34,
+     "height": 14
+    },
+    {
+     "kind": "hill",
+     "pos": [
+      60,
+      290
+     ],
+     "r": 30,
+     "height": 12
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      160,
+      160
+     ],
+     "r": 20,
+     "height": 4,
+     "falloff": 16
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      56,
+      124
+     ],
+     "r": 12,
+     "height": 6,
+     "falloff": 12
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      78,
+      232
+     ],
+     "r": 16,
+     "height": 1,
+     "falloff": 12
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      246,
+      92
+     ],
+     "r": 24,
+     "height": 3,
+     "falloff": 10
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      258,
+      214
+     ],
+     "r": 10,
+     "height": 6,
+     "falloff": 12
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      118,
+      46
+     ],
+     "r": 10,
+     "height": 8,
+     "falloff": 12
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      160,
+      300
+     ],
+     "r": 12,
+     "height": 0,
+     "falloff": 10
+    }
+   ]
+  },
+  "chunks": 6,
+  "slopeMaxDeg": 36,
+  "heightScale": 1
+ },
+ "atmosphere": {
+  "skyTop": "#3d6f8f",
+  "skyBottom": "#c7e0e0",
+  "fog": {
+   "color": "#a9c9c6",
+   "near": 30,
+   "far": 190
+  },
+  "sun": {
+   "dir": [
+    0.4,
+    0.55,
+    -0.35
+   ],
+   "color": "#fff0d4",
+   "intensity": 2
+  },
+  "hemi": {
+   "sky": "#bfe0f0",
+   "ground": "#3f5f4c",
+   "intensity": 1
+  },
+  "ground": "#e6eef0",
+  "groundAlt": "#7d9488",
+  "particles": [
+   "snow_light",
+   "fireflies_day"
+  ],
+  "ambient": "taiga"
+ },
+ "spawns": {
+  "default": [
+   160,
+   0,
+   298
+  ],
+  "fromPrev": [
+   160,
+   0,
+   298
+  ]
+ },
+ "checkpoints": [
+  {
+   "id": "CP_T1",
+   "pos": [
+    160,
+    0,
+    290
+   ],
+   "radius": 4
+  },
+  {
+   "id": "CP_T2",
+   "pos": [
+    96,
+    0,
+    236
+   ],
+   "radius": 4
+  },
+  {
+   "id": "CP_T3",
+   "pos": [
+    160,
+    0,
+    180
+   ],
+   "radius": 4
+  }
+ ],
+ "areas": [
+  {
+   "name": "clear_c",
+   "shape": "circle",
+   "pos": [
+    160,
+    160
+   ],
+   "r": 16
+  },
+  {
+   "name": "clear_w",
+   "shape": "circle",
+   "pos": [
+    56,
+    124
+   ],
+   "r": 11
+  },
+  {
+   "name": "clear_u",
+   "shape": "circle",
+   "pos": [
+    78,
+    232
+   ],
+   "r": 17
+  },
+  {
+   "name": "clear_b",
+   "shape": "circle",
+   "pos": [
+    246,
+    92
+   ],
+   "r": 3.5
+  },
+  {
+   "name": "windfall",
+   "shape": "circle",
+   "pos": [
+    246,
+    92
+   ],
+   "r": 22
+  },
+  {
+   "name": "clear_r",
+   "shape": "circle",
+   "pos": [
+    258,
+    214
+   ],
+   "r": 10
+  },
+  {
+   "name": "clear_g",
+   "shape": "circle",
+   "pos": [
+    118,
+    46
+   ],
+   "r": 9
+  },
+  {
+   "name": "clear_spawn",
+   "shape": "circle",
+   "pos": [
+    160,
+    296
+   ],
+   "r": 12
+  },
+  {
+   "name": "clear_exit",
+   "shape": "box",
+   "pos": [
+    160,
+    16
+   ],
+   "size": [
+    26,
+    30
+   ]
+  }
+ ],
+ "paths": [
+  {
+   "name": "path_road",
+   "points": [
+    [
+     160,
+     318
+    ],
+    [
+     160,
+     280
+    ],
+    [
+     156,
+     230
+    ],
+    [
+     160,
+     176
+    ]
+   ],
+   "width": 4
+  },
+  {
+   "name": "path_north",
+   "points": [
+    [
+     160,
+     144
+    ],
+    [
+     166,
+     100
+    ],
+    [
+     160,
+     40
+    ],
+    [
+     160,
+     2
+    ]
+   ],
+   "width": 4
+  },
+  {
+   "name": "path_w",
+   "points": [
+    [
+     144,
+     164
+    ],
+    [
+     100,
+     150
+    ],
+    [
+     66,
+     128
+    ]
+   ],
+   "width": 3
+  },
+  {
+   "name": "path_u",
+   "points": [
+    [
+     156,
+     230
+    ],
+    [
+     120,
+     236
+    ],
+    [
+     96,
+     232
+    ]
+   ],
+   "width": 3
+  },
+  {
+   "name": "path_b",
+   "points": [
+    [
+     176,
+     150
+    ],
+    [
+     214,
+     120
+    ],
+    [
+     226,
+     102
+    ]
+   ],
+   "width": 3
+  },
+  {
+   "name": "path_r",
+   "points": [
+    [
+     174,
+     172
+    ],
+    [
+     220,
+     200
+    ],
+    [
+     248,
+     212
+    ]
+   ],
+   "width": 3
+  },
+  {
+   "name": "path_g",
+   "points": [
+    [
+     154,
+     146
+    ],
+    [
+     142,
+     104
+    ],
+    [
+     128,
+     66
+    ],
+    [
+     124,
+     54
+    ]
+   ],
+   "width": 2.5
+  }
+ ],
+ "props": [
+  {
+   "id": "P_STONE_0",
+   "asset": "stone_disc",
+   "pos": [
+    91.5,
+    -0.1,
+    232.6
+   ],
+   "scale": 1.6
+  },
+  {
+   "id": "P_STONE_1",
+   "asset": "stone_disc",
+   "pos": [
+    89.2,
+    -0.1,
+    231.4
+   ],
+   "scale": 1.6
+  },
+  {
+   "id": "P_STONE_2",
+   "asset": "stone_disc",
+   "pos": [
+    86.9,
+    -0.1,
+    232.5
+   ],
+   "scale": 1.6
+  },
+  {
+   "id": "P_STONE_3",
+   "asset": "stone_disc",
+   "pos": [
+    84.6,
+    -0.1,
+    231.3
+   ],
+   "scale": 1.6
+  },
+  {
+   "id": "P_STONE_4",
+   "asset": "stone_disc",
+   "pos": [
+    82.3,
+    -0.1,
+    232.4
+   ],
+   "scale": 1.6
+  },
+  {
+   "id": "P_FIRE_PIT",
+   "asset": "fire_pit",
+   "pos": [
+    258,
+    0,
+    214
+   ],
+   "scale": 1.6
+  },
+  {
+   "id": "P_ROCK_W",
+   "asset": "big_rock",
+   "pos": [
+    50,
+    0,
+    120
+   ],
+   "scale": 0.35,
+   "collider": {
+    "type": "circle",
+    "r": 4.5
+   }
+  },
+  {
+   "id": "P_GATE_EXIT",
+   "asset": "gate",
+   "pos": [
+    160,
+    0,
+    10
+   ]
+  }
+ ],
+ "scatter": [
+  {
+   "asset": "tree_spruce",
+   "count": 900,
+   "seed": 5101,
+   "minDist": 4,
+   "avoid": [
+    "clear_*",
+    "path_*",
+    "windfall"
+   ],
+   "scaleRange": [
+    0.9,
+    1.8
+   ],
+   "collider": 0.6
+  },
+  {
+   "asset": "snow_mound",
+   "count": 225,
+   "seed": 5102,
+   "minDist": 3,
+   "avoid": [
+    "clear_*",
+    "path_*",
+    "windfall"
+   ],
+   "scaleRange": [
+    0.6,
+    1.4
+   ]
+  },
+  {
+   "asset": "rock",
+   "count": 113,
+   "seed": 5103,
+   "minDist": 5,
+   "avoid": [
+    "clear_*",
+    "path_*",
+    "windfall"
+   ],
+   "scaleRange": [
+    0.6,
+    1.6
+   ],
+   "collider": 0.5
+  },
+  {
+   "asset": "tree_pine",
+   "count": 140,
+   "seed": 5111,
+   "minDist": 3.2,
+   "avoid": [
+    "clear_b",
+    "path_*"
+   ],
+   "scaleRange": [
+    0.7,
+    1.2
+   ],
+   "collider": 0.45,
+   "color": "#3b3a33",
+   "bounds": [
+    224,
+    70,
+    268,
+    114
+   ]
+  },
+  {
+   "asset": "boulder",
+   "count": 40,
+   "seed": 5112,
+   "minDist": 3,
+   "avoid": [
+    "clear_b",
+    "path_*"
+   ],
+   "scaleRange": [
+    0.5,
+    1
+   ],
+   "collider": 0.6,
+   "bounds": [
+    224,
+    70,
+    268,
+    114
+   ]
+  },
+  {
+   "asset": "grass",
+   "count": 300,
+   "seed": 5113,
+   "minDist": 1.5,
+   "avoid": [
+    "path_*",
+    "clear_u"
+   ],
+   "scaleRange": [
+    0.6,
+    1.2
+   ]
+  }
+ ],
+ "surfaces": [
+  {
+   "id": "S_POND",
+   "type": "water",
+   "shape": "circle",
+   "pos": [
+    78,
+    232
+   ],
+   "r": 13
+  },
+  {
+   "type": "snow",
+   "shape": "circle",
+   "pos": [
+    78,
+    232
+   ],
+   "r": 3.2
+  },
+  {
+   "type": "stone",
+   "shape": "circle",
+   "pos": [
+    91.5,
+    232.6
+   ],
+   "r": 1.6
+  },
+  {
+   "type": "stone",
+   "shape": "circle",
+   "pos": [
+    89.2,
+    231.4
+   ],
+   "r": 1.6
+  },
+  {
+   "type": "stone",
+   "shape": "circle",
+   "pos": [
+    86.9,
+    232.5
+   ],
+   "r": 1.6
+  },
+  {
+   "type": "stone",
+   "shape": "circle",
+   "pos": [
+    84.6,
+    231.3
+   ],
+   "r": 1.6
+  },
+  {
+   "type": "stone",
+   "shape": "circle",
+   "pos": [
+    82.3,
+    232.4
+   ],
+   "r": 1.6
+  }
+ ],
+ "interactables": [
+  {
+   "id": "OBJ_FIVE_SEALS_ROCK",
+   "kind": "dialog",
+   "model": "big_rock",
+   "pos": [
+    160,
+    0,
+    160
+   ],
+   "radius": 8.5,
+   "solid": 6,
+   "prompt": "Осмотреть Гору Пяти Печатей",
+   "effects": [],
+   "requires": {
+    "flag": "ch01_met_leshy"
+   },
+   "lockedText": "ДМ: Камень как камень. Спрошу-ка дорогу у местных.",
+   "idleText": "Пять гнёзд. Пока не все печати на месте."
+  },
+  {
+   "id": "OBJ_ICE_W",
+   "kind": "use_target",
+   "model": "shard",
+   "pos": [
+    56,
+    0,
+    124
+   ],
+   "scale": 3,
+   "color": "#cfefff",
+   "radius": 3.2,
+   "solid": 1.4,
+   "prompt": "Лёд на камне",
+   "effects": [],
+   "hideWhen": "ch01_w_melted",
+   "idleText": "Печать вмёрзла в лёд. Посох (F) бы сюда.",
+   "useItem": {
+    "item": "ITM_STAFF",
+    "effects": [
+     {
+      "type": "setFlag",
+      "flag": "ch01_w_melted"
+     },
+     {
+      "type": "playSfx",
+      "id": "melt"
+     },
+     {
+      "type": "toast",
+      "text": "Лёд стаял. Под ним — белая печать."
+     }
+    ]
+   }
+  },
+  {
+   "id": "OBJ_SEAL_W",
+   "kind": "pickup",
+   "model": "seal",
+   "pos": [
+    56,
+    0,
+    124
+   ],
+   "radius": 2.2,
+   "prompt": "Сорвать печать",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "KEY_SEAL_W"
+    },
+    {
+     "type": "setFlag",
+     "flag": "ch01_seal_w"
+    },
+    {
+     "type": "playSfx",
+     "id": "stamp"
+    }
+   ],
+   "color": "#f4f1e6",
+   "hiddenUntil": "ch01_w_melted"
+  },
+  {
+   "id": "OBJ_SEAL_U",
+   "kind": "pickup",
+   "model": "seal",
+   "pos": [
+    78,
+    0,
+    232
+   ],
+   "radius": 2.2,
+   "prompt": "Сорвать печать",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "KEY_SEAL_U"
+    },
+    {
+     "type": "setFlag",
+     "flag": "ch01_seal_u"
+    },
+    {
+     "type": "playSfx",
+     "id": "stamp"
+    }
+   ],
+   "color": "#3d78c4"
+  },
+  {
+   "id": "OBJ_SEAL_B",
+   "kind": "pickup",
+   "model": "seal",
+   "pos": [
+    246,
+    0,
+    92
+   ],
+   "radius": 2.2,
+   "prompt": "Сорвать печать",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "KEY_SEAL_B"
+    },
+    {
+     "type": "setFlag",
+     "flag": "ch01_seal_b"
+    },
+    {
+     "type": "playSfx",
+     "id": "stamp"
+    }
+   ],
+   "color": "#2a2530",
+   "beacon": 60
+  },
+  {
+   "id": "OBJ_SEAL_R",
+   "kind": "pickup",
+   "model": "seal",
+   "pos": [
+    258,
+    0,
+    214.2
+   ],
+   "radius": 2.2,
+   "prompt": "Сорвать печать",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "KEY_SEAL_R"
+    },
+    {
+     "type": "setFlag",
+     "flag": "ch01_seal_r"
+    },
+    {
+     "type": "playSfx",
+     "id": "stamp"
+    }
+   ],
+   "color": "#c8402f",
+   "hiddenUntil": "ch01_fire_lit"
+  },
+  {
+   "id": "OBJ_FIRE_STONE_1",
+   "kind": "shrine",
+   "model": "stone_disc",
+   "color": "#8f8a84",
+   "pos": [
+    261.87,
+    0,
+    215.64
+   ],
+   "radius": 2,
+   "once": true,
+   "prompt": "Раздуть угли",
+   "idleText": "Угли тут уже тлеют.",
+   "effects": [
+    {
+     "type": "setFlag",
+     "flag": "ch01_fire_1"
+    },
+    {
+     "type": "playSfx",
+     "id": "crunch"
+    },
+    {
+     "type": "if",
+     "cond": {
+      "all": [
+       {
+        "flag": "ch01_fire_1"
+       },
+       {
+        "flag": "ch01_fire_2"
+       },
+       {
+        "flag": "ch01_fire_3"
+       }
+      ]
+     },
+     "then": [
+      {
+       "type": "setFlag",
+       "flag": "ch01_fire_lit"
+      },
+      {
+       "type": "playSfx",
+       "id": "success"
+      },
+      {
+       "type": "toast",
+       "text": "Очаг вспыхнул. В золе блеснула красная печать."
+      }
+     ],
+     "else": [
+      {
+       "type": "toast",
+       "text": "Угли зарделись. Ещё бы с другой стороны."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "OBJ_FIRE_STONE_2",
+   "kind": "shrine",
+   "model": "stone_disc",
+   "color": "#8f8a84",
+   "pos": [
+    254.65,
+    0,
+    216.53
+   ],
+   "radius": 2,
+   "once": true,
+   "prompt": "Раздуть угли",
+   "idleText": "Угли тут уже тлеют.",
+   "effects": [
+    {
+     "type": "setFlag",
+     "flag": "ch01_fire_2"
+    },
+    {
+     "type": "playSfx",
+     "id": "crunch"
+    },
+    {
+     "type": "if",
+     "cond": {
+      "all": [
+       {
+        "flag": "ch01_fire_1"
+       },
+       {
+        "flag": "ch01_fire_2"
+       },
+       {
+        "flag": "ch01_fire_3"
+       }
+      ]
+     },
+     "then": [
+      {
+       "type": "setFlag",
+       "flag": "ch01_fire_lit"
+      },
+      {
+       "type": "playSfx",
+       "id": "success"
+      },
+      {
+       "type": "toast",
+       "text": "Очаг вспыхнул. В золе блеснула красная печать."
+      }
+     ],
+     "else": [
+      {
+       "type": "toast",
+       "text": "Угли зарделись. Ещё бы с другой стороны."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "OBJ_FIRE_STONE_3",
+   "kind": "shrine",
+   "model": "stone_disc",
+   "color": "#8f8a84",
+   "pos": [
+    257.48,
+    0,
+    209.83
+   ],
+   "radius": 2,
+   "once": true,
+   "prompt": "Раздуть угли",
+   "idleText": "Угли тут уже тлеют.",
+   "effects": [
+    {
+     "type": "setFlag",
+     "flag": "ch01_fire_3"
+    },
+    {
+     "type": "playSfx",
+     "id": "crunch"
+    },
+    {
+     "type": "if",
+     "cond": {
+      "all": [
+       {
+        "flag": "ch01_fire_1"
+       },
+       {
+        "flag": "ch01_fire_2"
+       },
+       {
+        "flag": "ch01_fire_3"
+       }
+      ]
+     },
+     "then": [
+      {
+       "type": "setFlag",
+       "flag": "ch01_fire_lit"
+      },
+      {
+       "type": "playSfx",
+       "id": "success"
+      },
+      {
+       "type": "toast",
+       "text": "Очаг вспыхнул. В золе блеснула красная печать."
+      }
+     ],
+     "else": [
+      {
+       "type": "toast",
+       "text": "Угли зарделись. Ещё бы с другой стороны."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "OBJ_HOLLOW",
+   "kind": "dialog",
+   "model": "hollow",
+   "pos": [
+    118,
+    0,
+    46
+   ],
+   "radius": 2.8,
+   "solid": 1.1,
+   "once": true,
+   "prompt": "Заглянуть в дупло",
+   "idleText": "Пустое дупло. Пахнет шишками.",
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "KEY_SEAL_G"
+    },
+    {
+     "type": "setFlag",
+     "flag": "ch01_seal_g"
+    },
+    {
+     "type": "playSfx",
+     "id": "stamp"
+    },
+    {
+     "type": "toast",
+     "text": "В дупле — зелёная печать. И белка, очень недовольная."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_TRAIL_SIGN_1",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    150,
+    0,
+    128
+   ],
+   "rotY": 0,
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "К дуплу: прямо, потом у сосны налево. Или направо. Леший."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_TRAIL_SIGN_2",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    142,
+    0,
+    104
+   ],
+   "rotY": 0.4,
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Здесь был Дед."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_TRAIL_SIGN_3",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    134,
+    0,
+    82
+   ],
+   "rotY": 0.8,
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Осторожно, лёд."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_TRAIL_SIGN_4",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    127,
+    0,
+    64
+   ],
+   "rotY": 1.2000000000000002,
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Дупло близко. Не стучать: занято."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_TRAIL_SIGN_5",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    176,
+    0,
+    128
+   ],
+   "rotY": 1.6,
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Тракт — на север."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_TRAIL_SIGN_6",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    160,
+    0,
+    196
+   ],
+   "rotY": 2,
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Гора — прямо. Не заблудишься. Наверное."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_EGG_STUMP",
+   "kind": "sign",
+   "model": "stump",
+   "pos": [
+    172,
+    0,
+    270
+   ],
+   "radius": 2,
+   "prompt": "Прочитать табличку на пне",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "«Лес и Гора: тут можно найти оба»."
+    },
+    {
+     "type": "setFlag",
+     "flag": "egg02_seen"
+    }
+   ]
+  }
+ ],
+ "npcs": [
+  {
+   "id": "NPC_LESHY",
+   "model": "leshy",
+   "pos": [
+    168,
+    0,
+    276
+   ],
+   "rotY": -2.4,
+   "name": "Леший",
+   "dialogTrigger": "npc:NPC_LESHY"
+  }
+ ],
+ "triggers": [
+  {
+   "id": "TRG_TAIGA_EXIT",
+   "shape": "box",
+   "pos": [
+    160,
+    0,
+    14
+   ],
+   "size": [
+    24,
+    6,
+    10
+   ],
+   "onEnter": [
+    {
+     "type": "if",
+     "cond": {
+      "flag": "ch01_passport_given"
+     },
+     "then": [
+      {
+       "type": "completeObjective",
+       "id": "CH01.O04"
+      },
+      {
+       "type": "completeChapter"
+      }
+     ],
+     "else": [
+      {
+       "type": "toast",
+       "text": "ДМ: Рано на тракт. Сначала дела в тайге."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "abilityPoints": [],
+ "transition": {
+  "next": "ZONE_PASS",
+  "mode": "walk_fade"
+ }
+}

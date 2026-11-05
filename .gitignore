@@ -1,4 +1,9 @@
-.DS_Store
-*.log
+node_modules/
+dist/
+src/content/generated/
 .env
 .env.*
+*.log
+.DS_Store
+test-results/
+playwright-report/
