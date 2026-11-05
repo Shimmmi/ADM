@@ -63,3 +63,11 @@
 - **Этажи пещеры** — террасы рельефа на трёх высотах, соединённые пандусами (без отдельных heightmap на этаж).
 - **Модели** — процедурные low-poly примитивы (обязательный fallback TECH §13), GLB-загрузка поддержана, но не обязательна.
 - **Аудио** — процедурный синтез WebAudio (эмбиенты, SFX, мотивы), без сторонних файлов ⇒ нет лицензионных рисков.
+
+## Деплой (T9.2)
+
+- `npm run deploy -- prod|staging`, `bash scripts/deploy.sh rollback [prod|staging]`, `bash scripts/deploy.sh list [prod|staging]`.
+- Прод: `/var/www/adm/releases/<ts>` + симлинк `current`; staging: `/var/www/adm/staging-releases/<ts>` + симлинк `staging`, URL `/staging/` за Basic Auth (`/etc/nginx/adm-staging.htpasswd`, пароль у владельца сервера). Хранятся 3 последних релиза.
+- После выкладки скрипт проверяет `curl -I`: 200, CSP, X-Robots-Tag, Referrer-Policy, отсутствие версии nginx и sourcemap, `robots.txt`.
+- Копия конфигурации nginx — `docs/nginx/`. CSP на проде включается заменой `set $adm_csp "";` на `include snippets/adm-csp.conf;` при выкатке новой сборки (прототип грузит three.js с CDN).
+- Debug API попадает только в сборки с `VITE_DEBUG_TOKEN` (e2e и staging с `STAGING_DEBUG_TOKEN`); прод-сборка проверяется скриптом.
