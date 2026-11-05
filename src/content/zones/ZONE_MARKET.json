@@ -139,9 +139,9 @@
    "intensity": 0.42
   },
   "hemi": {
-   "sky": "#243056",
-   "ground": "#3a2418",
-   "intensity": 0.55
+   "sky": "#3a4a80",
+   "ground": "#4a3020",
+   "intensity": 1
   },
   "ground": "#4a4036",
   "groundAlt": "#6a5844",

@@ -72,6 +72,8 @@ export class Game implements DirectorPort {
   private current: DirectorJob | null = null;
   private running = false;
   private transitioning = false;
+  /** Только debug API: мини-игры засчитываются без запуска (сквозной e2e). */
+  debugAutoMinigames = false;
   private worldMinigames = 0;
   private runningWorld = new Set<string>();
   private overlayMinigame = false;
@@ -425,6 +427,7 @@ export class Game implements DirectorPort {
       this.save(true);
     };
     if (!factory) return finish('skipped');
+    if (this.debugAutoMinigames) return finish('done');
     const mg = factory();
     if (mg.world) {
       if (this.runningWorld.has(id)) return;
@@ -600,6 +603,10 @@ export class Game implements DirectorPort {
     return null;
   }
 
+  debugAbility(): void {
+    this.ability();
+  }
+
   private ability(): void {
     const ap = this.nearAbility();
     if (ap?.type === 'cloud_spot') {
@@ -764,7 +771,7 @@ export class Game implements DirectorPort {
       this.cam.input(m.dx, m.dy, m.wheel);
       this.cam.update(dt, this.player.pos, this.zone);
     }
-    this.atmosphere.follow(this.player.pos);
+    this.atmosphere.follow(this.player.pos, this.cam.camera.position);
     this.particles.update(dt, this.time);
     this.zone.update(dt, this.time);
     this.audio.update(dt);

@@ -36,7 +36,7 @@ const zone: ZoneDef = {
     skyTop: '#070b18', skyBottom: '#1a2744',
     fog: { color: '#141a2a', near: 28, far: 170 },
     sun: { dir: [-0.25, 0.22, -0.4], color: '#9bb4ff', intensity: 0.42 },
-    hemi: { sky: '#243056', ground: '#3a2418', intensity: 0.55 },
+    hemi: { sky: '#3a4a80', ground: '#4a3020', intensity: 1.0 },
     ground: '#4a4036', groundAlt: '#6a5844',
     particles: ['lanterns_float'],
     ambient: 'market',

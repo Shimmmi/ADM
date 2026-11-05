@@ -740,6 +740,7 @@
    ],
    "rotY": 3.141592653589793,
    "name": "Ша Сэн",
+   "hiddenUntil": "CH04.O04",
    "dialogTrigger": "npc:NPC_SHA"
   }
  ],

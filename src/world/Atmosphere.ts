@@ -55,12 +55,16 @@ export class Atmosphere {
     this.hemi.intensity = def.hemi.intensity * 1.7;
     // Темнота (пещера): туман смыкается на радиусе фонаря, за игроком — тёплый свет.
     const dark = def.darkness ?? 0;
-    this.lantern.visible = dark > 0;
+    const night = (def.time ?? 0.5) >= 0.75;
+    this.lantern.visible = dark > 0 || night;
     if (dark > 0) {
       fog.near = dark * 0.35;
       fog.far = dark * 2.2;
       this.lantern.distance = dark * 2.4;
-      this.lantern.intensity = 60;
+      this.lantern.intensity = 24;
+    } else if (night) {
+      this.lantern.distance = 16;
+      this.lantern.intensity = 12;
     }
   }
 
@@ -80,11 +84,17 @@ export class Atmosphere {
     }
   }
 
-  /** Тени и небо следуют за игроком. */
-  follow(target: THREE.Vector3): void {
+  private toCam = new THREE.Vector3();
+
+  /** Тени и небо следуют за игроком; фонарь — между игроком и камерой, чтобы свет падал на лица. */
+  follow(target: THREE.Vector3, camera?: THREE.Vector3): void {
     this.sky.position.copy(target);
     this.sun.target.position.copy(target);
     this.sun.position.copy(target).addScaledVector(this.sunDir, 90);
-    this.lantern.position.set(target.x, target.y + 2.2, target.z);
+    this.lantern.position.set(target.x, target.y + 3.2, target.z);
+    if (camera) {
+      this.toCam.subVectors(camera, target).setY(0);
+      if (this.toCam.lengthSq() > 1e-4) this.lantern.position.addScaledVector(this.toCam.normalize(), 2.6);
+    }
   }
 }

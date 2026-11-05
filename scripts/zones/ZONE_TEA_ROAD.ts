@@ -110,7 +110,7 @@ const zone: ZoneDef = {
   ],
   npcs: [
     { id: 'NPC_CARAVAN', model: 'caravan', pos: [200, 0, 346], rotY: 0.2, name: 'Алтан', dialogTrigger: 'npc:NPC_CARAVAN' },
-    { id: 'NPC_SHA', model: 'sha', pos: [200, 0, 168], rotY: Math.PI, name: 'Ша Сэн', dialogTrigger: 'npc:NPC_SHA' },
+    { id: 'NPC_SHA', model: 'sha', pos: [200, 0, 168], rotY: Math.PI, name: 'Ша Сэн', hiddenUntil: 'CH04.O04', dialogTrigger: 'npc:NPC_SHA' },
   ],
   triggers: [],
   abilityPoints: [],

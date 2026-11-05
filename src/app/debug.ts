@@ -14,6 +14,10 @@ export interface DebugApi {
   busy(): boolean;
   completeChapter(): void;
   chapter(): ChapterId;
+  autoMinigames(on: boolean): void;
+  ability(): void;
+  /** Видимые цели текущей зоны для e2e-исследователя. */
+  targets(): { objs: { id: string; useItem?: string; freezes?: string }[]; npcs: string[]; triggers: { id: string; x: number; z: number }[]; abilities: { id: string; x: number; z: number }[] };
 }
 
 export function installDebug(game: Game): void {
@@ -30,6 +34,17 @@ export function installDebug(game: Game): void {
     busy: () => game.busy,
     completeChapter: () => game.chapterComplete(),
     chapter: () => game.state.chapter,
+    autoMinigames: (on) => (game.debugAutoMinigames = on),
+    ability: () => game.debugAbility(),
+    targets: () => {
+      const z = game.zone;
+      return {
+        objs: [...z.interactables.values()].filter((r) => r.visible).map((r) => ({ id: r.def.id, useItem: r.def.useItem?.item, freezes: r.def.freezes })),
+        npcs: [...z.npcs.values()].filter((n) => n.visible).map((n) => n.def.id),
+        triggers: z.def.triggers.map((t) => ({ id: t.id, x: t.pos[0], z: t.pos[2] })),
+        abilities: z.def.abilityPoints.map((a) => ({ id: a.id, x: a.pos[0], z: a.pos[2] })),
+      };
+    },
   };
   (window as unknown as { __adm: DebugApi }).__adm = api;
   budgetOverlay(game);

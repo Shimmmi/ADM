@@ -10,6 +10,12 @@ export interface AdmWindow {
     goto(x: number, z: number): void;
     busy(): boolean;
     chapter(): string;
+    autoMinigames(on: boolean): void;
+    ability(): void;
+    targets(): { objs: { id: string; useItem?: string; freezes?: string }[]; npcs: string[]; triggers: { id: string; x: number; z: number }[]; abilities: { id: string; x: number; z: number }[] };
+    autoMinigames(on: boolean): void;
+    ability(): void;
+    targets(): { objs: { id: string; useItem?: string; freezes?: string }[]; npcs: string[]; triggers: { id: string; x: number; z: number }[]; abilities: { id: string; x: number; z: number }[] };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     game: any;
   };
@@ -31,6 +37,7 @@ export async function drain(page: Page, maxSteps = 200): Promise<void> {
   for (let i = 0; i < maxSteps; i++) {
     const busy = await page.evaluate(() => (window as unknown as AdmWindow).__adm.busy());
     if (!busy) return;
+    if (await page.getByRole('button', { name: 'Титры' }).count()) return;
     const next = page.getByRole('button', { name: /^(Дальше|У меня нет конверта)$/ });
     if (await next.count()) {
       await next.first().click({ timeout: 2000 }).catch(() => {});
