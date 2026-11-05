@@ -7,3 +7,4 @@ src/content/generated/
 .DS_Store
 test-results/
 playwright-report/
+.e2e-dist/

@@ -31,10 +31,11 @@ export default defineConfig({
     },
   },
   webServer: {
-    command: `npx vite --host 127.0.0.1 --port ${PORT} --strictPort`,
+    // Отдельная сборка с отладочным токеном: dev-сервер перезагружает страницу при любой правке файлов.
+    command: `npx vite build --outDir .e2e-dist --emptyOutDir --logLevel warn && npx vite preview --outDir .e2e-dist --host 127.0.0.1 --port ${PORT} --strictPort`,
     env: { VITE_DEBUG_TOKEN: 'e2e' },
     url: `http://127.0.0.1:${PORT}`,
     reuseExistingServer: false,
-    timeout: 60_000,
+    timeout: 180_000,
   },
 });
