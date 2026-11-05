@@ -24,6 +24,8 @@ export interface MinigameCtx {
   renderer: Renderer;
   scene: THREE.Scene;
   sfx(id: string): void;
+  /** Короткий тон (маяки, мотив фонарей): частота, громкость, длительность. */
+  ping(freq: number, gain: number, dur?: number): void;
   toast(text: string): void;
   say(speaker: string, text: string): Promise<void>;
   /** Время игры, с. */

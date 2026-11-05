@@ -1,0 +1,3044 @@
+{
+ "id": "ZONE_BAIKAL",
+ "chapter": "CH03",
+ "name": "Байкал",
+ "size": [
+  420,
+  420
+ ],
+ "terrain": {
+  "gen": {
+   "seed": 5503,
+   "base": 1.2,
+   "noiseAmp": 0.35,
+   "noiseScale": 70,
+   "octaves": 2,
+   "rim": 20,
+   "features": [
+    {
+     "kind": "ridge",
+     "pos": [
+      70,
+      340
+     ],
+     "to": [
+      70,
+      160
+     ],
+     "width": 18,
+     "height": 5,
+     "falloff": 12
+    },
+    {
+     "kind": "ridge",
+     "pos": [
+      350,
+      320
+     ],
+     "to": [
+      350,
+      140
+     ],
+     "width": 16,
+     "height": 6,
+     "falloff": 12
+    },
+    {
+     "kind": "hill",
+     "pos": [
+      90,
+      90
+     ],
+     "r": 28,
+     "height": 4
+    },
+    {
+     "kind": "hill",
+     "pos": [
+      340,
+      80
+     ],
+     "r": 26,
+     "height": 5
+    },
+    {
+     "kind": "ramp",
+     "pos": [
+      210,
+      410
+     ],
+     "to": [
+      210,
+      50
+     ],
+     "width": 90,
+     "height": 1.4,
+     "height2": 1.6,
+     "falloff": 16
+    }
+   ]
+  },
+  "chunks": 6,
+  "slopeMaxDeg": 32,
+  "heightScale": 1
+ },
+ "atmosphere": {
+  "skyTop": "#16324a",
+  "skyBottom": "#8ec9d6",
+  "fog": {
+   "color": "#b7e4ee",
+   "near": 40,
+   "far": 240
+  },
+  "sun": {
+   "dir": [
+    0.25,
+    0.7,
+    -0.35
+   ],
+   "color": "#eaf7ff",
+   "intensity": 1.7
+  },
+  "hemi": {
+   "sky": "#c6ecf5",
+   "ground": "#1d4a5c",
+   "intensity": 0.9
+  },
+  "ground": "#b7e3ee",
+  "groundAlt": "#e8f7fb",
+  "particles": [
+   "ice_sparkles"
+  ],
+  "ambient": "baikal"
+ },
+ "spawns": {
+  "default": [
+   210,
+   0,
+   400
+  ],
+  "fromPrev": [
+   210,
+   0,
+   400
+  ]
+ },
+ "checkpoints": [
+  {
+   "id": "CP_B0",
+   "pos": [
+    210,
+    0,
+    396
+   ],
+   "radius": 6
+  },
+  {
+   "id": "CP_B1",
+   "pos": [
+    210,
+    0,
+    332
+   ],
+   "radius": 6
+  },
+  {
+   "id": "CP_B2",
+   "pos": [
+    210,
+    0,
+    274
+   ],
+   "radius": 6
+  },
+  {
+   "id": "CP_B3",
+   "pos": [
+    210,
+    0,
+    222
+   ],
+   "radius": 6
+  },
+  {
+   "id": "CP_B4",
+   "pos": [
+    210,
+    0,
+    156
+   ],
+   "radius": 6
+  }
+ ],
+ "areas": [
+  {
+   "name": "clear_spawn",
+   "shape": "circle",
+   "pos": [
+    210,
+    398
+   ],
+   "r": 16
+  },
+  {
+   "name": "clear_shore",
+   "shape": "box",
+   "pos": [
+    210,
+    370
+   ],
+   "size": [
+    120,
+    50
+   ]
+  },
+  {
+   "name": "clear_gap1",
+   "shape": "box",
+   "pos": [
+    210,
+    274
+   ],
+   "size": [
+    40,
+    24
+   ]
+  },
+  {
+   "name": "clear_gap2",
+   "shape": "box",
+   "pos": [
+    210,
+    222
+   ],
+   "size": [
+    40,
+    22
+   ]
+  },
+  {
+   "name": "clear_palace",
+   "shape": "circle",
+   "pos": [
+    210,
+    86
+   ],
+   "r": 18
+  },
+  {
+   "name": "clear_after",
+   "shape": "box",
+   "pos": [
+    210,
+    150
+   ],
+   "size": [
+    36,
+    30
+   ]
+  }
+ ],
+ "paths": [
+  {
+   "name": "path_lake",
+   "points": [
+    [
+     210,
+     416
+    ],
+    [
+     210,
+     340
+    ],
+    [
+     210,
+     300
+    ],
+    [
+     210,
+     248
+    ],
+    [
+     210,
+     196
+    ],
+    [
+     210,
+     90
+    ]
+   ],
+   "width": 8
+  }
+ ],
+ "props": [
+  {
+   "id": "P_BAR_TI_1_w0",
+   "asset": "ice_wall",
+   "pos": [
+    11.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w1",
+   "asset": "ice_wall",
+   "pos": [
+    20.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w2",
+   "asset": "ice_wall",
+   "pos": [
+    29.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w3",
+   "asset": "ice_wall",
+   "pos": [
+    38.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w4",
+   "asset": "ice_wall",
+   "pos": [
+    47.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w5",
+   "asset": "ice_wall",
+   "pos": [
+    56.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w6",
+   "asset": "ice_wall",
+   "pos": [
+    65.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w7",
+   "asset": "ice_wall",
+   "pos": [
+    74.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w8",
+   "asset": "ice_wall",
+   "pos": [
+    83.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w9",
+   "asset": "ice_wall",
+   "pos": [
+    92.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w10",
+   "asset": "ice_wall",
+   "pos": [
+    101.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w11",
+   "asset": "ice_wall",
+   "pos": [
+    110.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w12",
+   "asset": "ice_wall",
+   "pos": [
+    119.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w13",
+   "asset": "ice_wall",
+   "pos": [
+    128.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w14",
+   "asset": "ice_wall",
+   "pos": [
+    137.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w15",
+   "asset": "ice_wall",
+   "pos": [
+    146.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w16",
+   "asset": "ice_wall",
+   "pos": [
+    155.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w17",
+   "asset": "ice_wall",
+   "pos": [
+    164.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w18",
+   "asset": "ice_wall",
+   "pos": [
+    173.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w19",
+   "asset": "ice_wall",
+   "pos": [
+    182.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_w20",
+   "asset": "ice_wall",
+   "pos": [
+    190.2,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e0",
+   "asset": "ice_wall",
+   "pos": [
+    229.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e1",
+   "asset": "ice_wall",
+   "pos": [
+    238.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e2",
+   "asset": "ice_wall",
+   "pos": [
+    247.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e3",
+   "asset": "ice_wall",
+   "pos": [
+    256.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e4",
+   "asset": "ice_wall",
+   "pos": [
+    265.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e5",
+   "asset": "ice_wall",
+   "pos": [
+    274.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e6",
+   "asset": "ice_wall",
+   "pos": [
+    283.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e7",
+   "asset": "ice_wall",
+   "pos": [
+    292.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e8",
+   "asset": "ice_wall",
+   "pos": [
+    301.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e9",
+   "asset": "ice_wall",
+   "pos": [
+    310.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e10",
+   "asset": "ice_wall",
+   "pos": [
+    319.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e11",
+   "asset": "ice_wall",
+   "pos": [
+    328.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e12",
+   "asset": "ice_wall",
+   "pos": [
+    337.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e13",
+   "asset": "ice_wall",
+   "pos": [
+    346.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e14",
+   "asset": "ice_wall",
+   "pos": [
+    355.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e15",
+   "asset": "ice_wall",
+   "pos": [
+    364.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e16",
+   "asset": "ice_wall",
+   "pos": [
+    373.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e17",
+   "asset": "ice_wall",
+   "pos": [
+    382.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e18",
+   "asset": "ice_wall",
+   "pos": [
+    391.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e19",
+   "asset": "ice_wall",
+   "pos": [
+    400.8,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_1_e20",
+   "asset": "ice_wall",
+   "pos": [
+    408.2,
+    0,
+    313.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_1_0",
+   "asset": "ice_wall",
+   "pos": [
+    194.2,
+    0,
+    293.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_1_1",
+   "asset": "ice_wall",
+   "pos": [
+    194.2,
+    0,
+    302.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_1_2",
+   "asset": "ice_wall",
+   "pos": [
+    194.2,
+    0,
+    307.2
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_1_0",
+   "asset": "ice_wall",
+   "pos": [
+    225.8,
+    0,
+    293.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_1_1",
+   "asset": "ice_wall",
+   "pos": [
+    225.8,
+    0,
+    302.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_1_2",
+   "asset": "ice_wall",
+   "pos": [
+    225.8,
+    0,
+    307.2
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w0",
+   "asset": "ice_wall",
+   "pos": [
+    11.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w1",
+   "asset": "ice_wall",
+   "pos": [
+    20.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w2",
+   "asset": "ice_wall",
+   "pos": [
+    29.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w3",
+   "asset": "ice_wall",
+   "pos": [
+    38.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w4",
+   "asset": "ice_wall",
+   "pos": [
+    47.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w5",
+   "asset": "ice_wall",
+   "pos": [
+    56.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w6",
+   "asset": "ice_wall",
+   "pos": [
+    65.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w7",
+   "asset": "ice_wall",
+   "pos": [
+    74.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w8",
+   "asset": "ice_wall",
+   "pos": [
+    83.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w9",
+   "asset": "ice_wall",
+   "pos": [
+    92.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w10",
+   "asset": "ice_wall",
+   "pos": [
+    101.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w11",
+   "asset": "ice_wall",
+   "pos": [
+    110.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w12",
+   "asset": "ice_wall",
+   "pos": [
+    119.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w13",
+   "asset": "ice_wall",
+   "pos": [
+    128.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w14",
+   "asset": "ice_wall",
+   "pos": [
+    137.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w15",
+   "asset": "ice_wall",
+   "pos": [
+    146.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w16",
+   "asset": "ice_wall",
+   "pos": [
+    155.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w17",
+   "asset": "ice_wall",
+   "pos": [
+    164.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w18",
+   "asset": "ice_wall",
+   "pos": [
+    173.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w19",
+   "asset": "ice_wall",
+   "pos": [
+    182.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_w20",
+   "asset": "ice_wall",
+   "pos": [
+    191.2,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e0",
+   "asset": "ice_wall",
+   "pos": [
+    228.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e1",
+   "asset": "ice_wall",
+   "pos": [
+    237.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e2",
+   "asset": "ice_wall",
+   "pos": [
+    246.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e3",
+   "asset": "ice_wall",
+   "pos": [
+    255.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e4",
+   "asset": "ice_wall",
+   "pos": [
+    264.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e5",
+   "asset": "ice_wall",
+   "pos": [
+    273.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e6",
+   "asset": "ice_wall",
+   "pos": [
+    282.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e7",
+   "asset": "ice_wall",
+   "pos": [
+    291.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e8",
+   "asset": "ice_wall",
+   "pos": [
+    300.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e9",
+   "asset": "ice_wall",
+   "pos": [
+    309.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e10",
+   "asset": "ice_wall",
+   "pos": [
+    318.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e11",
+   "asset": "ice_wall",
+   "pos": [
+    327.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e12",
+   "asset": "ice_wall",
+   "pos": [
+    336.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e13",
+   "asset": "ice_wall",
+   "pos": [
+    345.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e14",
+   "asset": "ice_wall",
+   "pos": [
+    354.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e15",
+   "asset": "ice_wall",
+   "pos": [
+    363.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e16",
+   "asset": "ice_wall",
+   "pos": [
+    372.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e17",
+   "asset": "ice_wall",
+   "pos": [
+    381.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e18",
+   "asset": "ice_wall",
+   "pos": [
+    390.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e19",
+   "asset": "ice_wall",
+   "pos": [
+    399.8,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_2_e20",
+   "asset": "ice_wall",
+   "pos": [
+    408.2,
+    0,
+    260.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_2_0",
+   "asset": "ice_wall",
+   "pos": [
+    195.2,
+    0,
+    242.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_2_1",
+   "asset": "ice_wall",
+   "pos": [
+    195.2,
+    0,
+    251.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_2_2",
+   "asset": "ice_wall",
+   "pos": [
+    195.2,
+    0,
+    254.2
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_2_0",
+   "asset": "ice_wall",
+   "pos": [
+    224.8,
+    0,
+    242.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_2_1",
+   "asset": "ice_wall",
+   "pos": [
+    224.8,
+    0,
+    251.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_2_2",
+   "asset": "ice_wall",
+   "pos": [
+    224.8,
+    0,
+    254.2
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w0",
+   "asset": "ice_wall",
+   "pos": [
+    11.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w1",
+   "asset": "ice_wall",
+   "pos": [
+    20.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w2",
+   "asset": "ice_wall",
+   "pos": [
+    29.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w3",
+   "asset": "ice_wall",
+   "pos": [
+    38.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w4",
+   "asset": "ice_wall",
+   "pos": [
+    47.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w5",
+   "asset": "ice_wall",
+   "pos": [
+    56.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w6",
+   "asset": "ice_wall",
+   "pos": [
+    65.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w7",
+   "asset": "ice_wall",
+   "pos": [
+    74.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w8",
+   "asset": "ice_wall",
+   "pos": [
+    83.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w9",
+   "asset": "ice_wall",
+   "pos": [
+    92.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w10",
+   "asset": "ice_wall",
+   "pos": [
+    101.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w11",
+   "asset": "ice_wall",
+   "pos": [
+    110.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w12",
+   "asset": "ice_wall",
+   "pos": [
+    119.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w13",
+   "asset": "ice_wall",
+   "pos": [
+    128.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w14",
+   "asset": "ice_wall",
+   "pos": [
+    137.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w15",
+   "asset": "ice_wall",
+   "pos": [
+    146.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w16",
+   "asset": "ice_wall",
+   "pos": [
+    155.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w17",
+   "asset": "ice_wall",
+   "pos": [
+    164.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w18",
+   "asset": "ice_wall",
+   "pos": [
+    173.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w19",
+   "asset": "ice_wall",
+   "pos": [
+    182.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_w20",
+   "asset": "ice_wall",
+   "pos": [
+    189.2,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e0",
+   "asset": "ice_wall",
+   "pos": [
+    230.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e1",
+   "asset": "ice_wall",
+   "pos": [
+    239.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e2",
+   "asset": "ice_wall",
+   "pos": [
+    248.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e3",
+   "asset": "ice_wall",
+   "pos": [
+    257.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e4",
+   "asset": "ice_wall",
+   "pos": [
+    266.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e5",
+   "asset": "ice_wall",
+   "pos": [
+    275.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e6",
+   "asset": "ice_wall",
+   "pos": [
+    284.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e7",
+   "asset": "ice_wall",
+   "pos": [
+    293.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e8",
+   "asset": "ice_wall",
+   "pos": [
+    302.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e9",
+   "asset": "ice_wall",
+   "pos": [
+    311.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e10",
+   "asset": "ice_wall",
+   "pos": [
+    320.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e11",
+   "asset": "ice_wall",
+   "pos": [
+    329.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e12",
+   "asset": "ice_wall",
+   "pos": [
+    338.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e13",
+   "asset": "ice_wall",
+   "pos": [
+    347.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e14",
+   "asset": "ice_wall",
+   "pos": [
+    356.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e15",
+   "asset": "ice_wall",
+   "pos": [
+    365.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e16",
+   "asset": "ice_wall",
+   "pos": [
+    374.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e17",
+   "asset": "ice_wall",
+   "pos": [
+    383.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e18",
+   "asset": "ice_wall",
+   "pos": [
+    392.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e19",
+   "asset": "ice_wall",
+   "pos": [
+    401.8,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_BAR_TI_3_e20",
+   "asset": "ice_wall",
+   "pos": [
+    408.2,
+    0,
+    210.2
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_3_0",
+   "asset": "ice_wall",
+   "pos": [
+    193.2,
+    0,
+    188.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_3_1",
+   "asset": "ice_wall",
+   "pos": [
+    193.2,
+    0,
+    197.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKW_TI_3_2",
+   "asset": "ice_wall",
+   "pos": [
+    193.2,
+    0,
+    204.2
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_3_0",
+   "asset": "ice_wall",
+   "pos": [
+    226.8,
+    0,
+    188.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_3_1",
+   "asset": "ice_wall",
+   "pos": [
+    226.8,
+    0,
+    197.8
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_FLANKE_TI_3_2",
+   "asset": "ice_wall",
+   "pos": [
+    226.8,
+    0,
+    204.2
+   ],
+   "rotY": -1.57,
+   "collider": {
+    "type": "box",
+    "size": [
+     11.6,
+     2.8
+    ]
+   }
+  },
+  {
+   "id": "P_PALACE",
+   "asset": "palace",
+   "pos": [
+    210,
+    0,
+    74
+   ],
+   "color": "#d7f4ff",
+   "collider": {
+    "type": "box",
+    "size": [
+     12,
+     8
+    ]
+   }
+  },
+  {
+   "id": "P_CP1",
+   "asset": "checkpoint",
+   "pos": [
+    204,
+    0,
+    332
+   ]
+  },
+  {
+   "id": "P_CP2",
+   "asset": "checkpoint",
+   "pos": [
+    204,
+    0,
+    274
+   ]
+  },
+  {
+   "id": "P_CP3",
+   "asset": "checkpoint",
+   "pos": [
+    204,
+    0,
+    222
+   ]
+  },
+  {
+   "id": "P_SHORE_ROCK",
+   "asset": "big_rock",
+   "pos": [
+    160,
+    0,
+    390
+   ],
+   "scale": 0.22,
+   "color": "#d5eef6",
+   "collider": {
+    "type": "circle",
+    "r": 6
+   }
+  }
+ ],
+ "scatter": [
+  {
+   "asset": "ice_ridge",
+   "count": 160,
+   "seed": 5301,
+   "minDist": 4.2,
+   "avoid": [
+    "clear_*",
+    "path_*"
+   ],
+   "scaleRange": [
+    0.7,
+    1.3
+   ],
+   "collider": 1.15,
+   "bounds": [
+    12,
+    80,
+    175,
+    360
+   ]
+  },
+  {
+   "asset": "ice_ridge",
+   "count": 160,
+   "seed": 5302,
+   "minDist": 4.2,
+   "avoid": [
+    "clear_*",
+    "path_*"
+   ],
+   "scaleRange": [
+    0.7,
+    1.3
+   ],
+   "collider": 1.15,
+   "bounds": [
+    245,
+    80,
+    408,
+    360
+   ]
+  },
+  {
+   "asset": "snow_mound",
+   "count": 70,
+   "seed": 5303,
+   "minDist": 4,
+   "avoid": [
+    "clear_spawn",
+    "path_lake"
+   ],
+   "scaleRange": [
+    0.6,
+    1.2
+   ],
+   "bounds": [
+    40,
+    350,
+    380,
+    412
+   ]
+  },
+  {
+   "asset": "rock",
+   "count": 24,
+   "seed": 5304,
+   "minDist": 8,
+   "avoid": [
+    "clear_*",
+    "path_*"
+   ],
+   "scaleRange": [
+    0.4,
+    0.8
+   ],
+   "collider": 0.5,
+   "bounds": [
+    40,
+    360,
+    380,
+    412
+   ],
+   "color": "#d5e4ea"
+  }
+ ],
+ "interactables": [
+  {
+   "id": "OBJ_ICE_SHARD_01",
+   "kind": "pickup",
+   "model": "shard",
+   "pos": [
+    176,
+    0,
+    364
+   ],
+   "radius": 2.2,
+   "prompt": "Поднять осколок льда",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "ITM_ICE_SHARD"
+    }
+   ],
+   "hiddenUntil": "ch03_met_nerpa",
+   "color": "#d7f4ff"
+  },
+  {
+   "id": "OBJ_ICE_SHARD_02",
+   "kind": "pickup",
+   "model": "shard",
+   "pos": [
+    244,
+    0,
+    368
+   ],
+   "radius": 2.2,
+   "prompt": "Поднять осколок льда",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "ITM_ICE_SHARD"
+    }
+   ],
+   "hiddenUntil": "ch03_met_nerpa",
+   "color": "#d7f4ff"
+  },
+  {
+   "id": "OBJ_ICE_SHARD_03",
+   "kind": "pickup",
+   "model": "shard",
+   "pos": [
+    208,
+    0,
+    342
+   ],
+   "radius": 2.2,
+   "prompt": "Поднять осколок льда",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "ITM_ICE_SHARD"
+    }
+   ],
+   "hiddenUntil": "ch03_met_nerpa",
+   "color": "#d7f4ff"
+  },
+  {
+   "id": "OBJ_PALACE_DOOR",
+   "kind": "gate",
+   "model": "ice_door",
+   "pos": [
+    210,
+    0,
+    92
+   ],
+   "radius": 4.2,
+   "prompt": "Осмотреть ледяную дверь",
+   "once": true,
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Дверь из прозрачного льда. За ней дышит дворец."
+    }
+   ],
+   "idleText": "Дух уже знает, что вы здесь."
+  },
+  {
+   "id": "OBJ_SIGN_SHORE",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    198,
+    0,
+    384
+   ],
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Нерпа проверяет печати быстрее ветра. Взятка не требуется."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_SIGN_CRACK",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    196,
+    0,
+    328
+   ],
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Лёд честный: тонкий хрустит заранее. Иди по тёмным пятнам."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_SIGN_STARS",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    230,
+    0,
+    270
+   ],
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Звёзды во льду — не для еды. Бацзе, это не тебе."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_SIGN_PALACE",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    198,
+    0,
+    150
+   ],
+   "radius": 2.2,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Дворец под льдом. Стучать вежливо, загадки — вслух."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_ICE_NOTE",
+   "kind": "sign",
+   "model": "stump",
+   "pos": [
+    236,
+    0,
+    348
+   ],
+   "radius": 2,
+   "prompt": "Прочитать записку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Осколок в кармане не тает. Проверено бородой."
+    }
+   ]
+  }
+ ],
+ "npcs": [
+  {
+   "id": "NPC_NERPA",
+   "model": "nerpa",
+   "pos": [
+    224,
+    0,
+    388
+   ],
+   "rotY": 0.4,
+   "name": "Нерпа",
+   "dialogTrigger": "npc:NPC_NERPA"
+  },
+  {
+   "id": "NPC_DRAGON",
+   "model": "dragon",
+   "pos": [
+    196,
+    0,
+    88
+   ],
+   "rotY": 0.9,
+   "name": "Дух Байкала",
+   "dialogTrigger": "npc:NPC_DRAGON"
+  }
+ ],
+ "triggers": [
+  {
+   "id": "TRG_THIN_ICE_START",
+   "shape": "box",
+   "pos": [
+    210,
+    0,
+    320
+   ],
+   "size": [
+    36,
+    8,
+    10
+   ],
+   "onEnter": [
+    {
+     "type": "if",
+     "cond": {
+      "all": [
+       {
+        "flag": "ch03_met_nerpa"
+       },
+       {
+        "notFlag": "mg_MG_THIN_ICE_done"
+       }
+      ]
+     },
+     "then": [
+      {
+       "type": "startMinigame",
+       "id": "MG_THIN_ICE"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "abilityPoints": [],
+ "thinIce": [
+  {
+   "id": "TI_1",
+   "pos": [
+    210,
+    300
+   ],
+   "size": [
+    28,
+    22
+   ],
+   "cell": 3,
+   "seed": 301
+  },
+  {
+   "id": "TI_2",
+   "pos": [
+    210,
+    248
+   ],
+   "size": [
+    26,
+    20
+   ],
+   "cell": 3,
+   "seed": 317
+  },
+  {
+   "id": "TI_3",
+   "pos": [
+    210,
+    196
+   ],
+   "size": [
+    30,
+    24
+   ],
+   "cell": 3,
+   "seed": 333
+  }
+ ],
+ "events": {
+  "MG_THIN_ICE_DONE": [
+   {
+    "type": "completeObjective",
+    "id": "CH03.O03"
+   },
+   {
+    "type": "activateObjective",
+    "id": "CH03.O04"
+   }
+  ],
+  "done:CH03.O02": [
+   {
+    "type": "activateObjective",
+    "id": "CH03.O03"
+   }
+  ]
+ },
+ "transition": {
+  "next": "ZONE_TEA_ROAD",
+  "mode": "walk_fade"
+ }
+}

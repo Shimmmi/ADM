@@ -1,0 +1,972 @@
+{
+ "id": "ZONE_MARKET",
+ "chapter": "CH07",
+ "name": "Рынок у Врат",
+ "size": [
+  300,
+  300
+ ],
+ "terrain": {
+  "gen": {
+   "seed": 7077,
+   "base": 0,
+   "noiseAmp": 0.45,
+   "noiseScale": 50,
+   "octaves": 2,
+   "rim": 6,
+   "features": [
+    {
+     "kind": "flat",
+     "pos": [
+      150,
+      260
+     ],
+     "r": 46,
+     "height": 0,
+     "falloff": 10
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      160,
+      140
+     ],
+     "r": 48,
+     "height": 10,
+     "falloff": 8
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      58,
+      140
+     ],
+     "r": 20,
+     "height": 10,
+     "falloff": 6
+    },
+    {
+     "kind": "flat",
+     "pos": [
+      180,
+      40
+     ],
+     "r": 16,
+     "height": 20,
+     "falloff": 6
+    },
+    {
+     "kind": "ramp",
+     "pos": [
+      210,
+      250
+     ],
+     "to": [
+      200,
+      158
+     ],
+     "height": 0,
+     "height2": 10,
+     "width": 8,
+     "falloff": 4
+    },
+    {
+     "kind": "ramp",
+     "pos": [
+      130,
+      250
+     ],
+     "to": [
+      120,
+      158
+     ],
+     "height": 0,
+     "height2": 10,
+     "width": 8,
+     "falloff": 4
+    },
+    {
+     "kind": "ramp",
+     "pos": [
+      150,
+      136
+     ],
+     "to": [
+      70,
+      136
+     ],
+     "height": 10,
+     "height2": 10,
+     "width": 5,
+     "falloff": 2.5
+    },
+    {
+     "kind": "ramp",
+     "pos": [
+      180,
+      100
+     ],
+     "to": [
+      180,
+      52
+     ],
+     "height": 10,
+     "height2": 20,
+     "width": 8,
+     "falloff": 4
+    }
+   ]
+  },
+  "chunks": 6,
+  "slopeMaxDeg": 38,
+  "heightScale": 1
+ },
+ "atmosphere": {
+  "skyTop": "#070b18",
+  "skyBottom": "#1a2744",
+  "fog": {
+   "color": "#141a2a",
+   "near": 28,
+   "far": 170
+  },
+  "sun": {
+   "dir": [
+    -0.25,
+    0.22,
+    -0.4
+   ],
+   "color": "#9bb4ff",
+   "intensity": 0.42
+  },
+  "hemi": {
+   "sky": "#243056",
+   "ground": "#3a2418",
+   "intensity": 0.55
+  },
+  "ground": "#4a4036",
+  "groundAlt": "#6a5844",
+  "particles": [
+   "lanterns_float"
+  ],
+  "ambient": "market",
+  "time": 0.85
+ },
+ "spawns": {
+  "default": [
+   150,
+   0,
+   278
+  ],
+  "fromPrev": [
+   150,
+   0,
+   278
+  ]
+ },
+ "checkpoints": [
+  {
+   "id": "CP_M1",
+   "pos": [
+    150,
+    0,
+    270
+   ],
+   "radius": 6
+  },
+  {
+   "id": "CP_M2",
+   "pos": [
+    126,
+    0,
+    200
+   ],
+   "radius": 5
+  },
+  {
+   "id": "CP_M3",
+   "pos": [
+    168,
+    0,
+    150
+   ],
+   "radius": 6
+  },
+  {
+   "id": "CP_M4",
+   "pos": [
+    64,
+    0,
+    146
+   ],
+   "radius": 5
+  },
+  {
+   "id": "CP_M5",
+   "pos": [
+    180,
+    0,
+    48
+   ],
+   "radius": 5
+  }
+ ],
+ "areas": [
+  {
+   "name": "clear_spawn",
+   "shape": "circle",
+   "pos": [
+    150,
+    274
+   ],
+   "r": 12
+  },
+  {
+   "name": "clear_plaza",
+   "shape": "circle",
+   "pos": [
+    150,
+    258
+   ],
+   "r": 22
+  },
+  {
+   "name": "clear_hu",
+   "shape": "circle",
+   "pos": [
+    176,
+    146
+   ],
+   "r": 14
+  },
+  {
+   "name": "clear_kite",
+   "shape": "circle",
+   "pos": [
+    52,
+    148
+   ],
+   "r": 10
+  },
+  {
+   "name": "clear_tower",
+   "shape": "circle",
+   "pos": [
+    180,
+    40
+   ],
+   "r": 12
+  }
+ ],
+ "paths": [
+  {
+   "name": "path_plaza",
+   "points": [
+    [
+     150,
+     292
+    ],
+    [
+     150,
+     250
+    ],
+    [
+     140,
+     236
+    ]
+   ],
+   "width": 4
+  },
+  {
+   "name": "path_east",
+   "points": [
+    [
+     210,
+     250
+    ],
+    [
+     200,
+     158
+    ],
+    [
+     176,
+     146
+    ]
+   ],
+   "width": 5
+  },
+  {
+   "name": "path_mid",
+   "points": [
+    [
+     130,
+     250
+    ],
+    [
+     120,
+     158
+    ],
+    [
+     150,
+     140
+    ]
+   ],
+   "width": 5
+  },
+  {
+   "name": "path_bridge",
+   "points": [
+    [
+     150,
+     136
+    ],
+    [
+     70,
+     136
+    ],
+    [
+     52,
+     148
+    ]
+   ],
+   "width": 4
+  },
+  {
+   "name": "path_tower",
+   "points": [
+    [
+     176,
+     130
+    ],
+    [
+     180,
+     100
+    ],
+    [
+     180,
+     30
+    ]
+   ],
+   "width": 5
+  }
+ ],
+ "props": [
+  {
+   "id": "P_HOUSE_W",
+   "asset": "house",
+   "pos": [
+    86,
+    0,
+    270
+   ],
+   "rotY": 0.2,
+   "collider": {
+    "type": "box",
+    "size": [
+     9,
+     7
+    ]
+   }
+  },
+  {
+   "id": "P_HOUSE_E",
+   "asset": "house",
+   "pos": [
+    228,
+    0,
+    272
+   ],
+   "rotY": -0.3,
+   "collider": {
+    "type": "box",
+    "size": [
+     9,
+     7
+    ]
+   }
+  },
+  {
+   "id": "P_HOUSE_HU",
+   "asset": "house",
+   "pos": [
+    188,
+    0,
+    158
+   ],
+   "rotY": 3.14,
+   "collider": {
+    "type": "box",
+    "size": [
+     9,
+     7
+    ]
+   }
+  },
+  {
+   "id": "P_STALL_1",
+   "asset": "stall",
+   "pos": [
+    104,
+    0,
+    252
+   ],
+   "color": "#ba3240"
+  },
+  {
+   "id": "P_STALL_2",
+   "asset": "stall",
+   "pos": [
+    186,
+    0,
+    250
+   ],
+   "color": "#3d5a9c"
+  },
+  {
+   "id": "P_STALL_3",
+   "asset": "stall",
+   "pos": [
+    168,
+    0,
+    168
+   ],
+   "rotY": 0.4,
+   "color": "#8a5a2a"
+  },
+  {
+   "id": "P_PAGODA",
+   "asset": "pagoda",
+   "pos": [
+    142,
+    0,
+    170
+   ],
+   "scale": 0.72,
+   "collider": {
+    "type": "box",
+    "size": [
+     4,
+     4
+    ]
+   }
+  },
+  {
+   "id": "P_BRAZIER_1",
+   "asset": "fire_pit",
+   "pos": [
+    150,
+    0,
+    248
+   ]
+  },
+  {
+   "id": "P_BRAZIER_2",
+   "asset": "fire_pit",
+   "pos": [
+    160,
+    0,
+    138
+   ]
+  },
+  {
+   "id": "P_CANAL_BRIDGE",
+   "asset": "bridge",
+   "pos": [
+    126,
+    0.2,
+    228
+   ],
+   "rotY": 0,
+   "scale": 1.3
+  },
+  {
+   "id": "P_MAIN_BRIDGE",
+   "asset": "bridge",
+   "pos": [
+    150,
+    0.2,
+    228
+   ],
+   "rotY": 0,
+   "scale": 1.3
+  },
+  {
+   "id": "P_HIGH_BRIDGE_A",
+   "asset": "bridge",
+   "pos": [
+    104,
+    0.4,
+    136
+   ],
+   "rotY": 1.57,
+   "scale": 2.1
+  },
+  {
+   "id": "P_HIGH_BRIDGE_B",
+   "asset": "bridge",
+   "pos": [
+    86,
+    0.4,
+    136
+   ],
+   "rotY": 1.57,
+   "scale": 2.1
+  },
+  {
+   "id": "P_FENCE_1",
+   "asset": "fence",
+   "pos": [
+    218,
+    0,
+    210
+   ],
+   "rotY": 1.57
+  },
+  {
+   "id": "P_FENCE_2",
+   "asset": "fence",
+   "pos": [
+    218,
+    0,
+    190
+   ],
+   "rotY": 1.57
+  },
+  {
+   "id": "P_TOWER",
+   "asset": "tower",
+   "pos": [
+    166,
+    0,
+    46
+   ],
+   "collider": {
+    "type": "box",
+    "size": [
+     3.2,
+     3.2
+    ]
+   }
+  },
+  {
+   "id": "P_GATE",
+   "asset": "gate_big",
+   "pos": [
+    180,
+    0,
+    28
+   ]
+  },
+  {
+   "id": "P_HU_CHEST",
+   "asset": "chest",
+   "pos": [
+    188,
+    0,
+    140
+   ]
+  },
+  {
+   "id": "P_LAMP_1",
+   "asset": "lantern",
+   "pos": [
+    118,
+    0,
+    264
+   ],
+   "color": "#ffb35a"
+  },
+  {
+   "id": "P_LAMP_2",
+   "asset": "lantern",
+   "pos": [
+    168,
+    0,
+    266
+   ],
+   "color": "#ffb35a"
+  },
+  {
+   "id": "P_LAMP_3",
+   "asset": "lantern",
+   "pos": [
+    96,
+    0,
+    246
+   ],
+   "color": "#ff7a3a"
+  },
+  {
+   "id": "P_LAMP_4",
+   "asset": "lantern",
+   "pos": [
+    200,
+    0,
+    246
+   ],
+   "color": "#ff7a3a"
+  },
+  {
+   "id": "P_LAMP_5",
+   "asset": "lantern",
+   "pos": [
+    154,
+    0,
+    176
+   ],
+   "color": "#ffb35a"
+  },
+  {
+   "id": "P_LAMP_6",
+   "asset": "lantern",
+   "pos": [
+    196,
+    0,
+    160
+   ],
+   "color": "#ffb35a"
+  },
+  {
+   "id": "P_LAMP_7",
+   "asset": "lantern",
+   "pos": [
+    72,
+    0,
+    132
+   ],
+   "color": "#ffcc66"
+  },
+  {
+   "id": "P_LAMP_8",
+   "asset": "lantern",
+   "pos": [
+    180,
+    0,
+    64
+   ],
+   "color": "#ffcc66"
+  }
+ ],
+ "scatter": [
+  {
+   "asset": "tree_round",
+   "count": 16,
+   "seed": 7711,
+   "minDist": 8,
+   "avoid": [
+    "clear_*",
+    "path_*"
+   ],
+   "scaleRange": [
+    0.8,
+    1.4
+   ],
+   "collider": 0.45,
+   "color": "#3f6a44",
+   "bounds": [
+    20,
+    100,
+    100,
+    190
+   ]
+  },
+  {
+   "asset": "bamboo",
+   "count": 14,
+   "seed": 7712,
+   "minDist": 3,
+   "avoid": [
+    "path_*",
+    "clear_*"
+   ],
+   "scaleRange": [
+    0.7,
+    1.2
+   ],
+   "bounds": [
+    200,
+    120,
+    270,
+    180
+   ]
+  },
+  {
+   "asset": "bush",
+   "count": 18,
+   "seed": 7713,
+   "minDist": 4,
+   "avoid": [
+    "path_*",
+    "clear_*"
+   ],
+   "scaleRange": [
+    0.6,
+    1.1
+   ],
+   "color": "#2f6a48"
+  },
+  {
+   "asset": "rock",
+   "count": 10,
+   "seed": 7714,
+   "minDist": 8,
+   "avoid": [
+    "path_*",
+    "clear_*"
+   ],
+   "scaleRange": [
+    0.4,
+    0.9
+   ],
+   "collider": 0.4,
+   "color": "#6a6058"
+  }
+ ],
+ "surfaces": [
+  {
+   "id": "S_CANAL",
+   "type": "water",
+   "shape": "box",
+   "pos": [
+    150,
+    228
+   ],
+   "size": [
+    250,
+    9
+   ]
+  },
+  {
+   "type": "wood",
+   "shape": "box",
+   "pos": [
+    206,
+    228
+   ],
+   "size": [
+    22,
+    16
+   ]
+  },
+  {
+   "type": "wood",
+   "shape": "box",
+   "pos": [
+    150,
+    228
+   ],
+   "size": [
+    10,
+    16
+   ]
+  },
+  {
+   "type": "wood",
+   "shape": "box",
+   "pos": [
+    126,
+    228
+   ],
+   "size": [
+    22,
+    16
+   ]
+  }
+ ],
+ "interactables": [
+  {
+   "id": "OBJ_SIGN_CANAL",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    150,
+    0,
+    242
+   ],
+   "radius": 2.2,
+   "hintable": false,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Вода холодная даже в праздник. Иди по мосту или по лестнице."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_SIGN_STAIR",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    196,
+    0,
+    246
+   ],
+   "radius": 2.2,
+   "hintable": false,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Лестница к мастеру Ху. Вторая — для тех, кто не любит толкаться."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_SIGN_KITE",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    108,
+    0,
+    140
+   ],
+   "radius": 2.2,
+   "hintable": false,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Змей улетел на западные ветки. Нюх Бацзе короче любого указателя."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_SIGN_TOWER",
+   "kind": "sign",
+   "model": "sign",
+   "pos": [
+    180,
+    0,
+    96
+   ],
+   "radius": 2.2,
+   "hintable": false,
+   "prompt": "Прочитать табличку",
+   "effects": [
+    {
+     "type": "toast",
+     "text": "Башня выше. Фонарь обидчивый: его мирит посох."
+    }
+   ]
+  },
+  {
+   "id": "OBJ_MARKET_STALL_BARGAIN",
+   "kind": "trade",
+   "model": "stall",
+   "color": "#c45a3a",
+   "pos": [
+    128,
+    0,
+    258
+   ],
+   "radius": 2.8,
+   "prompt": "Торговаться за пропуск",
+   "hintable": false,
+   "effects": [],
+   "idleText": "ТОРГОВЕЦ: Пропуск уже обсудили. Лавка считает выручку."
+  },
+  {
+   "id": "OBJ_KITE_TREE",
+   "kind": "pickup",
+   "model": "kite_tree",
+   "pos": [
+    48,
+    0,
+    150
+   ],
+   "radius": 2.8,
+   "prompt": "Снять воздушного змея",
+   "once": true,
+   "effects": [
+    {
+     "type": "giveItem",
+     "item": "ITM_KITE"
+    },
+    {
+     "type": "toast",
+     "text": "Змей целый. Только обиженный."
+    }
+   ],
+   "hintable": true,
+   "solid": 0.7
+  },
+  {
+   "id": "OBJ_TOWER_LANTERN",
+   "kind": "use_target",
+   "model": "tower_lantern",
+   "pos": [
+    192,
+    0,
+    36
+   ],
+   "radius": 2.6,
+   "hintable": false,
+   "prompt": "Починить фонарь",
+   "requires": {
+    "flag": "ch07_met_hu"
+   },
+   "lockedText": "Фонарь молчит. Сначала бы поговорить с мастером.",
+   "idleText": "ДМ: Не горит. Видимо, обиделся. Посох (F) его примирит.",
+   "effects": [],
+   "useItem": {
+    "item": "ITM_STAFF",
+    "effects": [
+     {
+      "type": "if",
+      "cond": {
+       "notFlag": "ch07_lantern_fixed"
+      },
+      "then": [
+       {
+        "type": "setFlag",
+        "flag": "ch07_lantern_fixed"
+       },
+       {
+        "type": "emit",
+        "event": "CH07_LANTERN_FIXED"
+       }
+      ],
+      "else": [
+       {
+        "type": "toast",
+        "text": "Фонарь уже горит. Обида прошла."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "npcs": [
+  {
+   "id": "NPC_MERCHANT",
+   "model": "merchant",
+   "pos": [
+    156,
+    0,
+    262
+   ],
+   "rotY": 0.15,
+   "name": "Господин Лян",
+   "dialogTrigger": "npc:NPC_MERCHANT"
+  },
+  {
+   "id": "NPC_MASTER_HU",
+   "model": "master_hu",
+   "pos": [
+    176,
+    0,
+    142
+   ],
+   "rotY": 0.4,
+   "name": "Мастер Ху",
+   "dialogTrigger": "npc:NPC_MASTER_HU"
+  }
+ ],
+ "triggers": [],
+ "abilityPoints": [],
+ "transition": {
+  "next": "ZONE_FOOTHILLS",
+  "mode": "sleigh"
+ }
+}

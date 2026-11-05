@@ -12,9 +12,13 @@ const fields = [
 function spans(from: number, to: number, span: number): number[] {
   const lo = Math.min(from, to), hi = Math.max(from, to);
   if (hi - lo < 3) return [];
-  const n = Math.max(1, Math.round((hi - lo) / span));
-  const step = (hi - lo) / n;
-  return Array.from({ length: n }, (_, i) => r(lo + step * (i + 0.5)));
+  const cover = 11.6;
+  const step = Math.min(span, 9);
+  const out: number[] = [];
+  for (let x = lo + cover / 2; x <= hi - cover / 2 + 0.01; x += step) out.push(r(x));
+  const tail = r(hi - cover / 2);
+  if (!out.length || Math.abs(out[out.length - 1] - tail) > 1.2) out.push(tail);
+  return out;
 }
 
 function barX(id: string, z: number, gap0: number, gap1: number): PropDef[] {

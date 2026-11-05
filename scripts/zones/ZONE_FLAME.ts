@@ -6,10 +6,10 @@ const sign = (id: string, x: number, z: number, text: string): InteractableDef =
   prompt: 'Прочитать табличку', effects: [{ type: 'toast', text }],
 });
 
-const bridge = (n: 1 | 2 | 3, zNear: number, zFar: number, lavaZ: number): InteractableDef[] => {
-  const id = `S_LAVA_${n}`;
+/** Ближний берег (юг) ставит флаг моста; дальний только морозит ту же реку. */
+function lavaPair(n: 1 | 2 | 3, zNear: number, zFar: number): InteractableDef[] {
+  const surface = `S_LAVA_${n}`;
   const flag = `ch05_bridge_${n}`;
-  const all = { all: [{ flag: 'ch05_bridge_1' }, { flag: 'ch05_bridge_2' }, { flag: 'ch05_bridge_3' }] };
   return [
     {
       id: `OBJ_LAVA_BRIDGE_0${n}`, kind: 'freezable', model: 'ice_bridge', pos: [180, 0, zNear], radius: 2.8,
@@ -17,13 +17,17 @@ const bridge = (n: 1 | 2 | 3, zNear: number, zFar: number, lavaZ: number): Inter
       requires: { flag: 'ch05_met_princess' },
       lockedText: 'ДМ: Княгиня ещё не просила мостов. Рано морозить.',
       idleText: 'ДМ: Посох (F) — и лава на двенадцать секунд станет льдом.',
-      freezes: id,
+      freezes: surface,
       effects: [],
       useItem: {
         item: 'ITM_STAFF',
         effects: [
           { type: 'setFlag', flag },
-          { type: 'if', cond: all, then: [{ type: 'emit', event: 'CH05_LAVA_BRIDGES_DONE' }] },
+          {
+            type: 'if',
+            cond: { all: [{ flag: 'ch05_bridge_1' }, { flag: 'ch05_bridge_2' }, { flag: 'ch05_bridge_3' }] },
+            then: [{ type: 'emit', event: 'CH05_LAVA_BRIDGES_DONE' }],
+          },
         ],
       },
     },
@@ -31,19 +35,16 @@ const bridge = (n: 1 | 2 | 3, zNear: number, zFar: number, lavaZ: number): Inter
       id: `OBJ_LAVA_BACK_0${n}`, kind: 'freezable', model: 'marker', color: '#bfe8f5', pos: [180, 0, zFar], radius: 2.6,
       prompt: 'Заморозить лаву с того берега',
       idleText: 'ДМ: Обратный мост. Посох помнит и эту сторону.',
-      freezes: id,
+      freezes: surface,
       effects: [],
     },
-    // lavaZ используется вызывающим в surfaces; держим ссылку, чтобы не разъехались берега.
-    { id: `OBJ_LAVA_MARK_0${n}`, kind: 'sign', model: 'marker', pos: [168, 0, lavaZ], radius: 0.4, prompt: '', effects: [], hideWhen: 'ch05_met_princess' },
   ];
-};
+}
 
-// Маркеры-заглушки над самой лавой не нужны: берега заданы явно.
 const lavaBridges: InteractableDef[] = [
-  ...bridge(1, 132, 112, 122).filter((x) => !x.id.startsWith('OBJ_LAVA_MARK')),
-  ...bridge(2, 96, 76, 86).filter((x) => !x.id.startsWith('OBJ_LAVA_MARK')),
-  ...bridge(3, 62, 40, 51).filter((x) => !x.id.startsWith('OBJ_LAVA_MARK')),
+  ...lavaPair(1, 132, 112),
+  ...lavaPair(2, 96, 76),
+  ...lavaPair(3, 62, 40),
 ];
 
 const cool = (x: number, z: number, rad = 9) => ({ shape: 'circle' as const, pos: [x, z] as [number, number], r: rad });
@@ -138,6 +139,7 @@ const zone: ZoneDef = {
       prompt: 'Укротить вихрь веером',
       requires: { objective: 'CH05.O03', state: 'active' },
       lockedText: 'ДМ: Сначала три ледяных мостика. Веер без них — просто веер.',
+      idleText: 'ДМ: Веер в руку и F. Вихрь любит точный ветер.',
       effects: [],
       useItem: { item: 'ITM_BANANA_FAN', effects: [{ type: 'startMinigame', id: 'MG_FIRE_FAN' }] },
     },
