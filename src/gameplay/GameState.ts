@@ -46,7 +46,7 @@ export interface SaveV1 {
   checkpoint?: Vec3;
 }
 
-export const DEFAULT_SETTINGS: Settings = { quality: 'auto', musicVol: 0.6, sfxVol: 0.8, reduceFx: false, ambient: true };
+export const DEFAULT_SETTINGS: Settings = { quality: 'auto', musicVol: 0.6, sfxVol: 0.8, reduceFx: typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches, ambient: true };
 
 export function freshState(settings: Settings = DEFAULT_SETTINGS): SaveV1 {
   return {

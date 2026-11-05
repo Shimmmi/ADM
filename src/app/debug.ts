@@ -32,4 +32,36 @@ export function installDebug(game: Game): void {
     chapter: () => game.state.chapter,
   };
   (window as unknown as { __adm: DebugApi }).__adm = api;
+  budgetOverlay(game);
+}
+
+/** Оверлей бюджета (TECH §15): FPS, draw calls, треугольники, память GPU, частицы. */
+function budgetOverlay(game: Game): void {
+  const box = document.createElement('div');
+  box.style.cssText = 'position:fixed;left:8px;bottom:8px;z-index:99;font:11px/1.35 monospace;color:#cfe;background:rgba(0,0,0,.55);padding:4px 6px;border-radius:4px;pointer-events:none;white-space:pre';
+  document.body.append(box);
+  const info = game.r.renderer.info;
+  info.autoReset = false;
+  let frames = 0;
+  let last = performance.now();
+  let fps = 0;
+  let calls = 0;
+  let tris = 0;
+  const tick = (now: number): void => {
+    frames++;
+    calls = Math.max(calls, info.render.calls);
+    tris = Math.max(tris, info.render.triangles);
+    info.reset();
+    if (now - last >= 500) {
+      fps = (frames * 1000) / (now - last);
+      const m = info.memory;
+      box.textContent = `${fps.toFixed(0)} fps · ${game.r.level} dpr ${game.r.dpr}\ncalls ${calls}/250 · tris ${(tris / 1000).toFixed(0)}k/400k\ngeo ${m.geometries} · tex ${m.textures} · particles ${game.particles.active}/3000`;
+      frames = 0;
+      calls = 0;
+      tris = 0;
+      last = now;
+    }
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
 }

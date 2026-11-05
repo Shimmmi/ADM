@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import type { InteractableDef, NpcDef, ScatterDef, Shape, SurfaceDef, SurfaceType, ZoneDef } from '../content/schema';
 import { TerrainService, buildTerrainMesh } from './Terrain';
 import { CollisionService } from './Colliders';
@@ -74,15 +75,18 @@ export class Zone {
     await tick(0.3);
 
     for (const s of this.surfaces) this.addSurface(s);
+    const props = new THREE.Group();
     for (const p of z.props) {
       const o = makeObject(p.asset, p.color);
       o.position.set(p.pos[0], this.h(p.pos[0], p.pos[2]) + p.pos[1], p.pos[2]);
       o.rotation.y = p.rotY ?? 0;
       o.scale.setScalar(p.scale ?? 1);
-      this.group.add(o);
+      props.add(o);
       if (p.collider?.type === 'circle') this.colliders.addCircle(p.id, p.pos[0], p.pos[2], p.collider.r * (p.scale ?? 1));
       if (p.collider?.type === 'box') this.colliders.addBox(p.id, p.pos[0], p.pos[2], p.collider.size[0] * (p.scale ?? 1), p.collider.size[1] * (p.scale ?? 1), p.rotY ?? 0);
     }
+    this.group.add(props);
+    bakeStatic(props);
     await tick(0.45);
 
     for (const i of z.interactables) this.addInteractable(i, isVisible(i));
@@ -306,5 +310,41 @@ export class Zone {
     this.colliders.clear();
     this.interactables.clear();
     this.npcs.clear();
+  }
+}
+
+const BAKE_CELL = 64;
+
+/** Сливает статичные меши пропсов по материалу в ячейках сетки: сотни примитивов → десятки draw calls (TECH §2). */
+function bakeStatic(root: THREE.Group): void {
+  root.updateMatrixWorld(true);
+  const buckets = new Map<string, { mat: THREE.Material; geos: THREE.BufferGeometry[] }>();
+  const merged: THREE.Mesh[] = [];
+  const p = new THREE.Vector3();
+  root.traverse((o) => {
+    const m = o as THREE.Mesh;
+    if (m.type !== 'Mesh' || Array.isArray(m.material) || m.userData.noMerge) return;
+    const g = m.geometry.index ? m.geometry.toNonIndexed() : m.geometry.clone();
+    for (const name of Object.keys(g.attributes)) if (name !== 'position' && name !== 'normal') g.deleteAttribute(name);
+    if (!g.getAttribute('normal')) g.computeVertexNormals();
+    g.applyMatrix4(m.matrixWorld);
+    m.getWorldPosition(p);
+    const key = `${m.material.uuid}|${Math.floor(p.x / BAKE_CELL)}|${Math.floor(p.z / BAKE_CELL)}`;
+    let b = buckets.get(key);
+    if (!b) buckets.set(key, (b = { mat: m.material, geos: [] }));
+    b.geos.push(g);
+    merged.push(m);
+  });
+  for (const m of merged) m.removeFromParent();
+  for (const { mat, geos } of buckets.values()) {
+    const g = mergeGeometries(geos, false);
+    geos.forEach((x) => x.dispose());
+    if (!g) continue;
+    g.computeBoundingSphere();
+    const mesh = new THREE.Mesh(g, mat);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    mesh.name = 'baked';
+    root.add(mesh);
   }
 }

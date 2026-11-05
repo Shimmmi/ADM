@@ -15,7 +15,7 @@ import { ZoneManager } from '../world/ZoneManager';
 import type { Zone, InteractableRt, NpcRt } from '../world/Zone';
 import { Atmosphere } from '../world/Atmosphere';
 import { Particles } from '../world/Particles';
-import { makeObject } from '../world/Models';
+import { makeObject, setBlobShadows } from '../world/Models';
 import { inShape } from '../world/shapes';
 import { CHAPTER_DEFS } from '../content/chapters';
 import { ITEM_MAP } from '../content/items';
@@ -210,6 +210,7 @@ export class Game implements DirectorPort {
     for (const tr of d.triggers) if (this.inTrigger(tr, this.player.pos)) this.inside.add(tr.id);
     this.atmosphere.apply(d.atmosphere);
     this.atmosphere.setShadows(this.r.level !== 'low', this.r.level === 'high' ? 2048 : 1024);
+    setBlobShadows(this.r.level === 'low');
     this.particles.set(d.atmosphere.particles, this.state.settings.reduceFx);
     this.audio.setZone(d.atmosphere.ambient);
     this.companions.clear();
@@ -398,6 +399,7 @@ export class Game implements DirectorPort {
       renderer: this.r,
       scene: this.scene,
       sfx: (id) => this.audio.sfx(id),
+      ping: (freq, gain, dur) => this.audio.ping(freq, gain, dur),
       toast: (text) => this.hud.toast(text),
       say: async (speaker, text) => {
         await this.dialog.line(speaker, kid(text, CONFIG.recipient.address));
@@ -919,6 +921,7 @@ export class Game implements DirectorPort {
     if (level !== this.r.level) {
       this.r.setQuality(level, this.state.settings.reduceFx);
       this.atmosphere.setShadows(level !== 'low', level === 'high' ? 2048 : 1024);
+      setBlobShadows(level === 'low');
     }
   }
 
@@ -931,6 +934,7 @@ export class Game implements DirectorPort {
     if (initial || prevQ !== s.quality || this.r.reduceFx !== s.reduceFx) {
       this.r.setQuality(q, s.reduceFx);
       this.atmosphere.setShadows(q !== 'low', q === 'high' ? 2048 : 1024);
+      setBlobShadows(q === 'low');
       if (this.zone) this.particles.set(this.zone.def.atmosphere.particles, s.reduceFx);
     }
     this.audio.musicVol = s.musicVol;

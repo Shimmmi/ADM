@@ -10,6 +10,8 @@ export interface AdmWindow {
     goto(x: number, z: number): void;
     busy(): boolean;
     chapter(): string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    game: any;
   };
 }
 

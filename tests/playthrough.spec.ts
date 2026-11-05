@@ -60,6 +60,9 @@ test('сквозное прохождение', async ({ page }) => {
   await page.waitForTimeout(400);
   await page.screenshot({ path: 'test-results/journal.png' });
   await page.keyboard.press('Escape');
+  await page.evaluate(() => { const g = (window as unknown as AdmWindow).__adm.game; g.applySettings({ ...g.state.settings, quality: 'low' }); });
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: 'test-results/ch02-low.png' });
   await page.keyboard.press('KeyM');
   await page.waitForTimeout(400);
   await page.screenshot({ path: 'test-results/worldmap.png' });

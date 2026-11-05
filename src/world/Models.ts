@@ -57,6 +57,33 @@ export const cone = (p: P, r: number, h: number, c: string, x = 0, y = 0, z = 0,
 
 /* ---------------- Персонажи ---------------- */
 
+/** Пятно-тень под персонажами: видно только когда настоящие тени выключены (Low). */
+let blobMat: THREE.MeshBasicMaterial | null = null;
+function blobMaterial(): THREE.MeshBasicMaterial {
+  if (blobMat) return blobMat;
+  const c = document.createElement('canvas');
+  c.width = c.height = 64;
+  const g = c.getContext('2d')!;
+  const grad = g.createRadialGradient(32, 32, 4, 32, 32, 32);
+  grad.addColorStop(0, 'rgba(0,0,0,0.45)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = grad;
+  g.fillRect(0, 0, 64, 64);
+  blobMat = new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false, visible: false });
+  blobMat.userData.shared = true;
+  return blobMat;
+}
+export function setBlobShadows(on: boolean): void {
+  blobMaterial().visible = on;
+}
+function addBlob(root: THREE.Object3D, r = 0.7): void {
+  const m = new THREE.Mesh(cachedGeo('blob', () => new THREE.PlaneGeometry(2, 2).rotateX(-Math.PI / 2)), blobMaterial());
+  m.scale.setScalar(r);
+  m.position.y = 0.04;
+  m.renderOrder = -1;
+  root.add(m);
+}
+
 export interface Rig {
   root: THREE.Group;
   body: THREE.Group;
@@ -110,6 +137,7 @@ export function makeSanta(): Rig {
   cone(body, 0.48, 0.75, C.red, 0, 3.1, 0);
   sphere(body, 0.15, C.white, 0.07, 3.51, 0);
   root.scale.setScalar(0.62);
+  addBlob(root, 1.1);
   return { root, legs, arms, body };
 }
 
@@ -302,7 +330,11 @@ export function hasRig(key: string): boolean {
 
 export function makeRig(key: string): Rig {
   const f = PEOPLE[key];
-  if (f) return f();
+  if (f) {
+    const rig = f();
+    addBlob(rig.root, 0.9);
+    return rig;
+  }
   const root = new THREE.Group();
   const body = new THREE.Group();
   root.add(body);
